@@ -138,10 +138,10 @@ export default function Overview() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-xl border border-emerald-950/40 bg-emerald-950/10 backdrop-blur-sm p-6 mt-4">
-              <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_140px_at_20%_0%,rgba(16,185,129,0.08),transparent_60%),radial-gradient(260px_120px_at_80%_100%,rgba(34,211,238,0.08),transparent_60%)]" />
-              <p className="relative text-emerald-300/90 leading-relaxed text-sm">
-                <span className="block text-xs uppercase tracking-wider text-emerald-400 font-bold mb-1">Kết luận</span>
+            <div className="relative overflow-hidden rounded-xl border border-emerald-800/20 bg-emerald-50/50 backdrop-blur-sm p-6 mt-4 shadow-sm">
+              <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_140px_at_20%_0%,rgba(16,185,129,0.05),transparent_60%)]" />
+              <p className="relative text-emerald-900 font-medium leading-relaxed text-sm">
+                <span className="block text-xs uppercase tracking-wider text-emerald-700 font-extrabold mb-1">Kết luận</span>
                 Đại đoàn kết vừa là mục tiêu, vừa là động lực, là cội nguồn sức mạnh vô địch của dân tộc Việt Nam trong kháng chiến và xây dựng, hội nhập hiện nay.
               </p>
             </div>
