@@ -302,17 +302,17 @@ export default function EasterEgg() {
             transform: showContent ? 'translateY(0)' : 'translateY(20px)',
           }}
         >
-          <p className="text-amber-200/80 text-lg font-heading font-semibold tracking-widest uppercase">
+          <p className="text-amber-300 text-lg font-heading font-bold tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             Nhóm 2
           </p>
-          <p className="text-amber-300/50 text-sm mt-1 font-heading">
+          <p className="text-amber-100/80 text-sm mt-1 font-heading">
             HCM202 — Tư tưởng Hồ Chí Minh
           </p>
         </div>
 
         {/* Members grid */}
         <div
-          className="grid grid-cols-2 gap-x-8 gap-y-1.5 transition-all duration-700 delay-[1500ms]"
+          className="grid grid-cols-2 gap-x-8 gap-y-2 transition-all duration-700 delay-[1500ms] bg-black/15 p-5 rounded-xl border border-amber-500/10 backdrop-blur-sm"
           style={{
             opacity: showContent ? 1 : 0,
             transform: showContent ? 'translateY(0)' : 'translateY(20px)',
@@ -321,8 +321,8 @@ export default function EasterEgg() {
           {members.map((name, i) => (
             <p
               key={i}
-              className={`text-sm font-heading ${
-                i === 0 ? 'text-amber-300/90 font-semibold' : 'text-amber-100/50'
+              className={`text-sm font-heading tracking-wide ${
+                i === 0 ? 'text-amber-400 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]' : 'text-amber-100/90'
               }`}
             >
               {name}
@@ -332,7 +332,7 @@ export default function EasterEgg() {
 
         {/* Dev credit */}
         <p
-          className="text-amber-400/40 text-xs font-heading mt-2 transition-all duration-700 delay-[1800ms]"
+          className="text-amber-300/80 text-xs font-heading mt-2 transition-all duration-700 delay-[1800ms]"
           style={{
             opacity: showContent ? 1 : 0,
           }}
@@ -343,7 +343,7 @@ export default function EasterEgg() {
 
       {/* Bottom hint */}
       <p
-        className="absolute bottom-8 text-amber-200/30 text-sm font-heading transition-all duration-700 delay-[2000ms]"
+        className="absolute bottom-8 text-amber-200/70 text-sm font-heading transition-all duration-700 delay-[2000ms] animate-pulse"
         style={{
           opacity: showContent ? 1 : 0,
         }}
