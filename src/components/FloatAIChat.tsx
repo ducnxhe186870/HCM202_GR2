@@ -145,7 +145,7 @@ export default function FloatAIChat() {
         {/* Header */}
         <div className="flex justify-between items-center bg-gradient-to-r from-amber-900/60 to-amber-950/80 px-4 py-3 border-b border-amber-900/30">
           <div className="flex gap-2.5 items-center">
-            <h3 className="text-sm font-extrabold uppercase tracking-wider text-amber-200">Trợ Lý DoanKetBot</h3>
+            <h3 className="text-sm font-extrabold uppercase tracking-wider text-amber-200">Trợ Lý Gr2Bot</h3>
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -166,7 +166,7 @@ export default function FloatAIChat() {
               <div className="flex justify-start items-start gap-2.5 pe-10">
                 <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-amber-900/30" />
                 <div className="text-xs rounded-xl rounded-tl-none p-3 bg-[#161720] border border-neutral-800/80 text-neutral-300 leading-relaxed shadow-sm">
-                  Xin chào! Tôi là DoanKetBot – trợ lý ảo giúp bạn tìm hiểu về chuyên đề Tư tưởng Hồ Chí Minh.<br />
+                  Xin chào! Tôi là Gr2Bot – trợ lý ảo giúp bạn tìm hiểu về chuyên đề Tư tưởng Hồ Chí Minh.<br />
                   Bạn muốn nghiên cứu nội dung nào? (Ví dụ: “Vai trò của đại đoàn kết”, “Mặt trận dân tộc thống nhất”)
                 </div>
               </div>
