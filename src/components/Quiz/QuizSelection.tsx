@@ -97,7 +97,7 @@ export default function QuizSelection() {
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
       
       <div
-        className="min-h-screen relative p-6 pt-16 bg-gradient-to-b from-[#0d0e12] to-[#12131a]"
+        className="min-h-screen relative p-6 pt-16 bg-gradient-to-b from-[#FDF6E3] to-white"
       >
       {/* Background Image overlay with low opacity */}
       <div
@@ -108,7 +108,7 @@ export default function QuizSelection() {
       />
       {/* Background overlay */}
       <div
-        className="absolute inset-0 z-10 bg-gradient-to-b from-neutral-950/90 via-transparent to-neutral-950/95 pointer-events-none"
+        className="absolute inset-0 z-10 bg-gradient-to-b from-white/90 via-transparent to-white/95 pointer-events-none"
       />
 
       {/* Particles Background Effect */}
@@ -117,7 +117,7 @@ export default function QuizSelection() {
         quantity={60}
         staticity={30}
         ease={70}
-        color="#d97706"
+        color="#b91c1c"
         size={1.2}
         vx={0.1}
         vy={0.1}
@@ -126,32 +126,32 @@ export default function QuizSelection() {
       <div className="max-w-5xl mx-auto relative z-20">
         {/* Header Section */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-4 py-1.5 rounded-full text-xs font-semibold mb-6">
-            <div className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></div>
+          <div className="inline-flex items-center gap-2 bg-red-600/5 border border-red-600/30 text-red-600 px-4 py-1.5 rounded-full text-xs font-semibold mb-6">
+            <div className="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse"></div>
             Đấu trường Kiến thức Lịch sử
           </div>
 
           <h1
-            className="text-4xl md:text-5xl font-title tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-400 mb-2 drop-shadow-[0_0_8px_rgba(217,119,6,0.3)]"
+            className="text-4xl md:text-5xl font-title tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-amber-700 to-red-600 mb-2 drop-shadow-[0_0_8px_rgba(185,28,28,0.2)]"
           >
             ĐẠI ĐOÀN KẾT
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-100 font-heading mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-stone-800 font-heading mb-4">
             Khảo Thí Kiến Thức Tương Tác
           </h2>
 
-          <p className="text-base text-neutral-400 mb-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-stone-500 mb-6 max-w-2xl mx-auto leading-relaxed">
             Chọn sảnh khảo thí để bắt đầu rèn luyện và kiểm tra kiến thức về tư tưởng Hồ Chí Minh.
           </p>
 
           {/* Progress Dots */}
           <div className="flex items-center justify-center gap-2 opacity-50">
-            <div className="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
-            <div className="w-6 h-px bg-amber-900"></div>
-            <div className="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
-            <div className="w-6 h-px bg-amber-900"></div>
-            <div className="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+            <div className="w-6 h-px bg-red-800"></div>
+            <div className="w-1.5 h-1.5 bg-red-600 rounded-full"></div>
+            <div className="w-6 h-px bg-red-800"></div>
+            <div className="w-1.5 h-1.5 bg-red-600 rounded-full"></div>
           </div>
         </div>
 
@@ -160,8 +160,8 @@ export default function QuizSelection() {
           {quizChapters.map((chapter) => (
             <div
               key={chapter.id}
-              className={`group relative gold-glow-panel bg-[#12131a]/85 border border-amber-900/30 rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer ${
-                selectedChapter === chapter.id ? "border-amber-400 ring-1 ring-amber-400/50" : ""
+              className={`group relative gold-glow-panel bg-white/85 border border-red-800/15 rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer flex flex-col ${
+                selectedChapter === chapter.id ? "border-red-600 ring-1 ring-red-600/50" : ""
               }`}
               onClick={() => setSelectedChapter(chapter.id)}
             >
@@ -169,20 +169,20 @@ export default function QuizSelection() {
               <div className="text-3xl mb-3">{chapter.icon}</div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-neutral-100 mb-2 leading-snug group-hover:text-amber-400 transition-colors font-heading">
+              <h3 className="text-lg font-bold text-stone-800 mb-2 leading-snug group-hover:text-red-600 transition-colors font-heading">
                 {chapter.title}
               </h3>
 
               {/* Description */}
-              <p className="text-neutral-400 text-xs leading-relaxed mb-6">
+              <p className="text-stone-500 text-xs leading-relaxed flex-1">
                 {chapter.description}
               </p>
 
               {/* Footer */}
-              <div className="flex items-center justify-between mt-auto">
+              <div className="flex items-center justify-between mt-4">
                 <Link
                   to={chapter.id === "tu-tuong-ho-chi-minh-dai-doan-ket" ? "/flashcard-study" : `/quiz?chapter=${chapter.id}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-neutral-950 font-bold text-xs rounded-lg hover:from-amber-400 hover:to-amber-500 transition-all duration-200"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-xs rounded-lg hover:from-red-500 hover:to-red-600 transition-all duration-200"
                 >
                   {chapter.id === "tu-tuong-ho-chi-minh-dai-doan-ket" ? "Ôn tập" : "Bắt đầu"}
                   <svg
@@ -200,13 +200,13 @@ export default function QuizSelection() {
                   </svg>
                 </Link>
 
-                <span className="text-neutral-500 text-xs font-semibold">
+                <span className="text-stone-400 text-xs font-semibold">
                   {chapter.parts} câu
                 </span>
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-400/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           ))}
         </div>

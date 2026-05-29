@@ -228,16 +228,16 @@ export default function Part1() {
   }
 
   return (
-    <div className="w-full min-h-[80vh] bg-gradient-to-b from-[#0d0e12] to-[#12131a] p-6 md:p-12 flex flex-col items-center justify-center relative">
+    <div className="w-full min-h-[80vh] bg-gradient-to-b from-[#FDF6E3] to-white p-6 md:p-12 flex flex-col items-center justify-center relative">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         {/* Left Column: Title & Swipable Cards */}
         <div className="lg:col-span-7 flex flex-col items-center lg:items-start">
-          <h3 className="uppercase text-amber-500 font-heading text-4xl md:text-5xl mb-10 text-center lg:text-left drop-shadow-[0_0_8px_rgba(217,119,6,0.3)]">
+          <h3 className="uppercase text-red-700 font-heading text-4xl md:text-5xl mb-10 text-center lg:text-left drop-shadow-[0_0_8px_rgba(185,28,28,0.2)]">
             <TypingAnimation
               startOnView={true}
               duration={50}
-              className="text-amber-500 font-heading text-3xl md:text-4xl"
+              className="text-red-700 font-heading text-3xl md:text-4xl"
             >
               Vai trò của đại đoàn kết
             </TypingAnimation>
@@ -248,19 +248,19 @@ export default function Part1() {
             style={{ touchAction: "none" }}
           >
             {/* BACK LAYERS (visual gold-glowing stack effect) */}
-            <div className="absolute inset-0 translate-x-2.5 translate-y-2.5 rounded-2xl border border-amber-900/20 bg-[#161722]/40 backdrop-blur-sm -z-10 shadow-lg" />
-            <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl border border-amber-900/30 bg-[#161722]/60 backdrop-blur-sm -z-10 shadow-md" />
+            <div className="absolute inset-0 translate-x-2.5 translate-y-2.5 rounded-2xl border border-red-800/10 bg-white/40 backdrop-blur-sm -z-10 shadow-lg" />
+            <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl border border-red-800/15 bg-white/60 backdrop-blur-sm -z-10 shadow-md" />
 
             {/* Swipe hint */}
             {showHint && !isDragging && (
               <div className="absolute -right-16 top-1/2 -translate-y-1/2 z-40 pointer-events-none select-none animate-swipeLeftHint">
-                <Hand className="text-amber-500 size-12 drop-shadow-[0_0_8px_rgba(217,119,6,0.6)]" />
+                <Hand className="text-red-700 size-12 drop-shadow-[0_0_6px_rgba(185,28,28,0.3)]" />
               </div>
             )}
 
             {/* TOP (interactive) LAYER - Glowing Glass Plate */}
             <motion.div
-              className="relative rounded-2xl border border-amber-500/30 font-heading text-neutral-200 select-none z-30 shadow-2xl p-8"
+              className="relative rounded-2xl border border-red-600/30 font-heading text-stone-700 select-none z-30 shadow-2xl p-8"
               animate={controls}
               onPointerDown={handlePointerDown}
               onPointerMove={handlePointerMove}
@@ -270,7 +270,7 @@ export default function Part1() {
               whileTap={{ scale: 0.995 }}
               whileHover={{ scale: 1.005 }}
               style={{
-                backgroundColor: "rgba(22, 23, 34, 0.85)",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
                 backdropFilter: "blur(12px)",
                 width: "550px",
                 maxWidth: "100%",
@@ -281,11 +281,11 @@ export default function Part1() {
                 transform: "translateZ(0)",
               }}
             >
-              <div className="absolute top-3 right-4 text-xs font-bold text-amber-500/50">
+              <div className="absolute top-3 right-4 text-xs font-bold text-red-700/50">
                 {index + 1} / {texts.length} • Trượt để xem tiếp
               </div>
 
-              <div className="relative h-96 overflow-y-auto pr-2 dark-scrollbar prose prose-invert prose-amber max-w-none text-neutral-300">
+              <div className="relative h-96 overflow-y-auto pr-2 dark-scrollbar prose prose-stone max-w-none text-stone-600">
                 <ReactMarkdown>{texts[index]}</ReactMarkdown>
               </div>
             </motion.div>
@@ -294,7 +294,7 @@ export default function Part1() {
 
         {/* Right Column: Historical Photo with Lens Zoom */}
         <div className="lg:col-span-5 flex justify-center items-center mt-8 lg:mt-0">
-          <div className="relative rounded-2xl border border-amber-900/30 p-2 bg-[#12131a]/80 shadow-2xl w-full max-w-sm">
+          <div className="relative rounded-2xl border border-red-800/15 p-2 bg-white/80 shadow-2xl w-full max-w-sm">
             <Lens hovering={hovering} setHovering={setHovering}>
               <img
                 src="/imgs/bacho.webp"
@@ -302,7 +302,7 @@ export default function Part1() {
                 className="rounded-xl w-full object-cover transform scale-x-[-1] cursor-none shadow-md brightness-90 hover:brightness-100 transition-all duration-300"
               />
             </Lens>
-            <div className="text-center mt-3 text-xs text-neutral-500 font-semibold italic">
+            <div className="text-center mt-3 text-xs text-stone-400 font-semibold italic">
               Bác Hồ kính yêu với khối đại đoàn kết toàn dân tộc
             </div>
           </div>

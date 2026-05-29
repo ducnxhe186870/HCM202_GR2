@@ -45,10 +45,10 @@ const aiUsages = [
 
 export default function Source() {
   return (
-    <div className="relative w-full min-h-screen bg-[#0d0e12] px-6 md:px-12 pt-28 pb-20 overflow-x-hidden z-0">
+    <div className="relative w-full min-h-screen bg-[#FDF6E3] px-6 md:px-12 pt-28 pb-20 overflow-x-hidden z-0">
       {/* Subtle map projection in background */}
       <img 
-        className="fixed opacity-[0.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10 scale-110 select-none filter invert" 
+        className="fixed opacity-[0.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10 scale-110 select-none" 
         src="/imgs/Vietnam_(orthographic_projection).svg" 
         alt="Vietnam Map Background"
       />
@@ -57,28 +57,28 @@ export default function Source() {
         {/* Title Header */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-wider uppercase">
-            <span className="bg-gradient-to-b from-amber-100 via-amber-300 to-amber-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(245,158,11,0.2)]">
+            <span className="bg-gradient-to-b from-red-800 via-red-600 to-red-700 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(185,28,28,0.15)]">
               Tài Nguyên Lưu Trữ
             </span>
           </h2>
-          <p className="text-neutral-400 text-xs md:text-sm font-medium tracking-wide uppercase">
+          <p className="text-stone-500 text-xs md:text-sm font-medium tracking-wide uppercase">
             Nguồn tư liệu, hình ảnh và hệ cơ sở tri thức ứng dụng trong dự án
           </p>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-500/40 to-transparent mx-auto mt-4" />
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-red-600/40 to-transparent mx-auto mt-4" />
         </div>
 
         {/* Shelf Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Box 1: Giáo trình (Content) */}
-          <div className="relative overflow-hidden rounded-xl border border-amber-900/30 bg-[#161720]/60 backdrop-blur-sm p-6 hover:border-amber-500/40 transition duration-300 group hover:shadow-[0_0_20px_rgba(245,158,11,0.06)] flex flex-col justify-between">
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(245,158,11,0.03),transparent_60%)]" />
+          <div className="relative overflow-hidden rounded-xl border border-red-800/15 bg-[#FAF0DC]/60 backdrop-blur-sm p-6 hover:border-red-600/30 transition duration-300 group hover:shadow-[0_0_20px_rgba(185,28,28,0.04)] flex flex-col justify-between">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(185,28,28,0.02),transparent_60%)]" />
             <div>
-              <h3 className="text-lg font-bold text-amber-200 flex items-center gap-2 mb-4 border-b border-neutral-800 pb-2">
-                <BookText className="size-5 text-amber-500" /> Giáo trình & Lý luận
+              <h3 className="text-lg font-bold text-amber-700 flex items-center gap-2 mb-4 border-b border-stone-300 pb-2">
+                <BookText className="size-5 text-red-700" /> Giáo trình & Lý luận
               </h3>
-              <div className="space-y-3 text-neutral-400 text-sm leading-relaxed">
-                <p className="font-semibold text-neutral-200">
+              <div className="space-y-3 text-stone-500 text-sm leading-relaxed">
+                <p className="font-semibold text-stone-700">
                   Giáo trình Tư tưởng Hồ Chí Minh
                 </p>
                 <p>
@@ -92,19 +92,19 @@ export default function Source() {
           </div>
 
           {/* Box 2: Video */}
-          <div className="relative overflow-hidden rounded-xl border border-amber-900/30 bg-[#161720]/60 backdrop-blur-sm p-6 hover:border-amber-500/40 transition duration-300 group hover:shadow-[0_0_20px_rgba(245,158,11,0.06)]">
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(245,158,11,0.03),transparent_60%)]" />
-            <h3 className="text-lg font-bold text-amber-200 flex items-center gap-2 mb-4 border-b border-neutral-800 pb-2">
-              <Film className="size-5 text-amber-500" /> Tư liệu nghe nhìn
+          <div className="relative overflow-hidden rounded-xl border border-red-800/15 bg-[#FAF0DC]/60 backdrop-blur-sm p-6 hover:border-red-600/30 transition duration-300 group hover:shadow-[0_0_20px_rgba(185,28,28,0.04)]">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(185,28,28,0.02),transparent_60%)]" />
+            <h3 className="text-lg font-bold text-amber-700 flex items-center gap-2 mb-4 border-b border-stone-300 pb-2">
+              <Film className="size-5 text-red-700" /> Tư liệu nghe nhìn
             </h3>
             <div className="space-y-4">
               {videoSources.map((item, idx) => (
                 <div key={idx} className="group/item flex items-start gap-2">
-                  <span className="text-amber-500 mt-1 font-bold shrink-0">•</span>
+                  <span className="text-red-700 mt-1 font-bold shrink-0">•</span>
                   <Link 
                     to={item.url} 
                     target="_blank" 
-                    className="text-neutral-400 group-hover/item:text-amber-400 text-sm transition-colors leading-relaxed flex items-center gap-1.5 hover:underline"
+                    className="text-stone-500 group-hover/item:text-red-600 text-sm transition-colors leading-relaxed flex items-center gap-1.5 hover:underline"
                   >
                     <span>{item.title}</span>
                     <ExternalLink className="size-3.5 shrink-0 opacity-40 group-hover/item:opacity-100" />
@@ -115,19 +115,19 @@ export default function Source() {
           </div>
 
           {/* Box 3: Hình ảnh */}
-          <div className="relative overflow-hidden rounded-xl border border-amber-900/30 bg-[#161720]/60 backdrop-blur-sm p-6 hover:border-amber-500/40 transition duration-300 group hover:shadow-[0_0_20px_rgba(245,158,11,0.06)] md:col-span-2">
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(245,158,11,0.03),transparent_60%)]" />
-            <h3 className="text-lg font-bold text-amber-200 flex items-center gap-2 mb-4 border-b border-neutral-800 pb-2">
-              <Images className="size-5 text-amber-500" /> Tư liệu hình ảnh & Lịch sử
+          <div className="relative overflow-hidden rounded-xl border border-red-800/15 bg-[#FAF0DC]/60 backdrop-blur-sm p-6 hover:border-red-600/30 transition duration-300 group hover:shadow-[0_0_20px_rgba(185,28,28,0.04)] md:col-span-2">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(185,28,28,0.02),transparent_60%)]" />
+            <h3 className="text-lg font-bold text-amber-700 flex items-center gap-2 mb-4 border-b border-stone-300 pb-2">
+              <Images className="size-5 text-red-700" /> Tư liệu hình ảnh & Lịch sử
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {imgSources.map((item, idx) => (
                 <div key={idx} className="group/item flex items-start gap-2">
-                  <span className="text-amber-500 mt-1 font-bold shrink-0">•</span>
+                  <span className="text-red-700 mt-1 font-bold shrink-0">•</span>
                   <Link 
                     to={item.url} 
                     target="_blank" 
-                    className="text-neutral-400 group-hover/item:text-amber-400 text-sm transition-colors leading-relaxed flex items-center gap-1.5 hover:underline"
+                    className="text-stone-500 group-hover/item:text-red-600 text-sm transition-colors leading-relaxed flex items-center gap-1.5 hover:underline"
                   >
                     <span>{item.title}</span>
                     <ExternalLink className="size-3.5 shrink-0 opacity-40 group-hover/item:opacity-100" />
@@ -138,33 +138,33 @@ export default function Source() {
           </div>
 
           {/* Box 4: AI & Đạo đức học thuật */}
-          <div className="relative overflow-hidden rounded-xl border border-amber-900/30 bg-[#161720]/60 backdrop-blur-sm p-6 hover:border-amber-500/40 transition duration-300 group hover:shadow-[0_0_20px_rgba(245,158,11,0.06)] md:col-span-2">
-            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(245,158,11,0.03),transparent_60%)]" />
-            <h3 className="text-lg font-bold text-amber-200 flex items-center gap-2 mb-4 border-b border-neutral-800 pb-2">
-              <Brain className="size-5 text-amber-500" /> Trí tuệ nhân tạo & Đạo đức học thuật
+          <div className="relative overflow-hidden rounded-xl border border-red-800/15 bg-[#FAF0DC]/60 backdrop-blur-sm p-6 hover:border-red-600/30 transition duration-300 group hover:shadow-[0_0_20px_rgba(185,28,28,0.04)] md:col-span-2">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(280px_160px_at_10%_0%,rgba(185,28,28,0.02),transparent_60%)]" />
+            <h3 className="text-lg font-bold text-amber-700 flex items-center gap-2 mb-4 border-b border-stone-300 pb-2">
+              <Brain className="size-5 text-red-700" /> Trí tuệ nhân tạo & Đạo đức học thuật
             </h3>
             
             <div className="space-y-4 text-sm">
-              <div className="bg-[#12131a]/60 border border-neutral-800/60 p-4 rounded-lg">
-                <h4 className="text-neutral-200 font-semibold mb-2">Nguyên tắc ứng dụng AI:</h4>
-                <ul className="space-y-1.5 text-neutral-400 leading-relaxed list-none">
+              <div className="bg-white/60 border border-stone-300/60 p-4 rounded-lg">
+                <h4 className="text-stone-700 font-semibold mb-2">Nguyên tắc ứng dụng AI:</h4>
+                <ul className="space-y-1.5 text-stone-500 leading-relaxed list-none">
                   <li className="flex items-start gap-2">
-                    <span className="text-amber-500/60 font-bold shrink-0 mt-0.5">•</span>
+                    <span className="text-red-700/60 font-bold shrink-0 mt-0.5">•</span>
                     <span>Chỉ khai thác AI làm công cụ trợ giúp xử lý dữ liệu và định hình cấu trúc, không thay thế tư duy phản biện của nhóm.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-amber-500/60 font-bold shrink-0 mt-0.5">•</span>
+                    <span className="text-red-700/60 font-bold shrink-0 mt-0.5">•</span>
                     <span>Tất cả dữ kiện lịch sử hoặc lý luận học tập đều được kiểm định bằng giáo trình và tài liệu nghiên cứu chính thống.</span>
                   </li>
                 </ul>
               </div>
 
               <div className="space-y-2">
-                <h4 className="text-neutral-200 font-semibold">Nhật ký sử dụng AI:</h4>
+                <h4 className="text-stone-700 font-semibold">Nhật ký sử dụng AI:</h4>
                 <div className="space-y-2 pl-3">
                   {aiUsages.map((text, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-neutral-400 text-sm">
-                      <span className="text-amber-500 font-bold shrink-0 mt-1">•</span>
+                    <div key={idx} className="flex items-start gap-2 text-stone-500 text-sm">
+                      <span className="text-red-700 font-bold shrink-0 mt-1">•</span>
                       <span>{text}</span>
                     </div>
                   ))}

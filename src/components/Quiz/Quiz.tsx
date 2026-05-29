@@ -741,8 +741,8 @@ export default function Quiz() {
         ></div>
         <div className="max-w-4xl mx-auto relative z-40">
           {/* Header Results */}
-          <div className="bg-black/80 rounded-3xl shadow-2xl p-8 mb-6">
-            <div className="flex items-center justify-between text-white mb-6">
+          <div className="bg-white/90 border border-stone-200 rounded-3xl shadow-2xl p-8 mb-6">
+            <div className="flex items-center justify-between text-stone-800 mb-6">
               <div className="flex items-center gap-3">
                 <svg
                   className="w-8 h-8 text-red-500"
@@ -768,10 +768,10 @@ export default function Quiz() {
             </div>
 
             <div className="text-center">
-              <div className="text-6xl font-bold text-white mb-2">
+              <div className="text-6xl font-bold text-stone-800 mb-2">
                 {score}/{shuffledQuestions.length}
               </div>
-              <p className="text-xl text-gray-300 mb-4">
+              <p className="text-xl text-stone-500 mb-4">
                 Bạn đã trả lời đúng {score} trên {shuffledQuestions.length} câu
                 hỏi
               </p>
@@ -804,7 +804,7 @@ export default function Quiz() {
               </div>
 
               {/* Save Score Section */}
-              <div className="mt-8 border-t border-gray-700/50 pt-6 max-w-md mx-auto">
+              <div className="mt-8 border-t border-stone-300 pt-6 max-w-md mx-auto">
                 {!isSaved ? (
                   <div className="flex flex-col gap-3">
                     <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block text-left">
@@ -817,7 +817,7 @@ export default function Quiz() {
                         value={participantName}
                         onChange={(e) => setParticipantName(e.target.value)}
                         disabled={isSaving}
-                        className="flex-1 bg-black/60 border border-gray-700 rounded-xl px-4 py-2 text-white text-sm focus:outline-none focus:border-red-500 placeholder:text-gray-600 disabled:opacity-50"
+                        className="flex-1 bg-white/80 border border-stone-300 rounded-xl px-4 py-2 text-stone-800 text-sm focus:outline-none focus:border-red-500 placeholder:text-stone-400 disabled:opacity-50"
                       />
                       <button
                         onClick={saveScore}
@@ -838,8 +838,8 @@ export default function Quiz() {
           </div>
 
           {/* Leaderboard Panel */}
-          <div className="bg-black/80 rounded-3xl shadow-2xl p-6 mb-6">
-            <div className="flex items-center gap-2 mb-4 border-b border-gray-700/50 pb-3">
+          <div className="bg-white/90 border border-stone-200 rounded-3xl shadow-2xl p-6 mb-6">
+            <div className="flex items-center gap-2 mb-4 border-b border-stone-300 pb-3">
               <span className="text-xl">🏆</span>
               <h2 className="text-lg font-bold text-yellow-500 uppercase tracking-wider">
                 Bảng Vàng Danh Dự
@@ -907,10 +907,10 @@ export default function Quiz() {
               return (
                 <div
                   key={question.id}
-                  className="bg-black/80 rounded-2xl border-2 border-gray-700 p-6"
+                  className="bg-white/90 border border-stone-200 rounded-2xl border-2 border-stone-300 p-6"
                 >
                   {/* Question */}
-                  <h3 className="text-white font-semibold mb-4 leading-relaxed">
+                  <h3 className="text-stone-800 font-semibold mb-4 leading-relaxed">
                     {question.question}
                   </h3>
 
@@ -1033,10 +1033,10 @@ export default function Quiz() {
             <div className="flex items-center justify-between text-white mb-4">
               <h1 className="text-2xl font-bold">Quiz: Đại Đoàn Kết Dân Tộc</h1>
               <div className="flex items-center gap-3">
-                <span className="text-sm font-semibold bg-black/20 px-3 py-1 rounded-full border border-white/10">
+                <span className="text-sm font-semibold bg-black/20 px-3 py-1 rounded-full border border-stone-200">
                   ⏱️ {Math.floor(elapsedTime / 60)}:{(elapsedTime % 60).toString().padStart(2, '0')}
                 </span>
-                <span className="text-lg font-semibold bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                <span className="text-lg font-semibold bg-white/10 px-3 py-1 rounded-full border border-stone-200">
                   {currentQuestion + 1}/{shuffledQuestions.length}
                 </span>
               </div>

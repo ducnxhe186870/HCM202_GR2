@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router";
 import { useVTNavigate } from "../hooks/useVTNavigate";
 import { Home, HelpCircle, Users, Info, Award } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function NavigationDock() {
   const vtNavigate = useVTNavigate();
   const location = useLocation();
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const menuItems = [
     { name: "Sảnh Chính", path: "/", icon: Home },
@@ -16,6 +18,22 @@ export default function NavigationDock() {
     // { name: "Tài Liệu", path: "/sources", icon: BookOpen },
     { name: "Tổng Quan", path: "/overview", icon: Info },
   ];
+
+  // Auto-hide on scroll down, show on scroll up
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false); // scrolling down
+      } else {
+        setIsVisible(true); // scrolling up
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   function handleNav(e: React.MouseEvent, to: string) {
     e.preventDefault();
@@ -36,12 +54,13 @@ export default function NavigationDock() {
   }
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[999] pointer-events-auto">
+    <div 
+      className={`fixed bottom-5 left-1/2 -translate-x-1/2 z-[999] pointer-events-auto transition-all duration-300 ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
+      }`}
+    >
       <div 
-        className="flex items-end gap-3 px-6 py-3 rounded-3xl bg-[#12131a]/85 backdrop-blur-xl border border-amber-900/30 shadow-[0_15px_50px_rgba(0,0,0,0.8)]"
-        style={{
-          boxShadow: "0 10px 40px -10px rgba(217, 119, 6, 0.15), 0 15px 50px rgba(0,0,0,0.8)"
-        }}
+        className="flex items-end gap-2 px-4 py-2.5 rounded-2xl bg-white/90 backdrop-blur-xl border border-red-800/12 shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
       >
         {menuItems.map((item, idx) => {
           const Icon = item.icon;
@@ -54,11 +73,11 @@ export default function NavigationDock() {
           if (hoveredIdx !== null) {
             const distance = Math.abs(idx - hoveredIdx);
             if (distance === 0) {
-              scale = 1.25;
-              translateY = -8;
+              scale = 1.2;
+              translateY = -6;
             } else if (distance === 1) {
-              scale = 1.1;
-              translateY = -3;
+              scale = 1.08;
+              translateY = -2;
             }
           }
 
@@ -69,31 +88,31 @@ export default function NavigationDock() {
               onClick={(e) => handleNav(e, item.path)}
               onMouseEnter={() => handleMouseEnter(item.path, idx)}
               onMouseLeave={() => setHoveredIdx(null)}
-              className="relative group flex flex-col items-center p-2 rounded-2xl transition-all duration-250 ease-out"
+              className="relative group flex flex-col items-center p-1.5 rounded-xl transition-all duration-250 ease-out"
               style={{
                 transform: `scale(${scale}) translateY(${translateY}px)`,
                 transformOrigin: "bottom center",
               }}
             >
               {/* Tooltip */}
-              <span className="absolute -top-12 px-3 py-1.5 rounded-lg text-xs font-bold text-amber-400 bg-[#161722] border border-amber-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-xl">
+              <span className="absolute -top-10 px-2.5 py-1 rounded-lg text-xs font-bold text-red-700 bg-white border border-red-800/15 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-lg">
                 {item.name}
               </span>
 
               {/* Indicator Dot */}
               {isActive && (
-                <span className="absolute -bottom-1 w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.8)] animate-pulse" />
+                <span className="absolute -bottom-0.5 w-1.5 h-1.5 rounded-full bg-red-600 shadow-[0_0_6px_rgba(185,28,28,0.6)]" />
               )}
 
               {/* Icon Container */}
               <div 
-                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
                   isActive 
-                    ? "bg-amber-500/10 text-amber-400 border border-amber-500/30" 
-                    : "text-neutral-400 hover:text-amber-400 hover:bg-neutral-800/50 border border-transparent"
+                    ? "bg-red-50 text-red-700 border border-red-600/25" 
+                    : "text-stone-400 hover:text-red-600 hover:bg-red-50/60 border border-transparent"
                 }`}
               >
-                <Icon className="w-6 h-6" />
+                <Icon className="w-5 h-5" />
               </div>
             </Link>
           );

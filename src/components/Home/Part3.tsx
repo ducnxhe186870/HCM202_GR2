@@ -46,7 +46,7 @@ const TextGenerateEffectOnView = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-white opacity-0 inline-block mr-2 md:mr-3"
+              className="text-stone-800 opacity-0 inline-block mr-2 md:mr-3"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -61,7 +61,7 @@ const TextGenerateEffectOnView = ({
 
   return (
     <div ref={ref} className={cn("font-bold", className)}>
-      <div className="text-white font-heading text-4xl md:text-5xl leading-tight tracking-normal uppercase text-center [text-shadow:-3px_2px_0px_black] drop-shadow-lg">
+      <div className="text-stone-800 font-heading text-4xl md:text-5xl leading-tight tracking-normal uppercase text-center drop-shadow-lg">
         {renderWords()}
       </div>
     </div>
@@ -147,7 +147,7 @@ const AnimatedTabs = ({ cardData }: { cardData: CardData[] }) => {
         role="tablist"
         aria-label="Điều kiện xây dựng khối đại đoàn kết"
       >
-        <div className="flex justify-center gap-2 md:gap-4 bg-black/20 backdrop-blur-sm rounded-full p-2 border border-white/20">
+        <div className="flex justify-center gap-2 md:gap-4 bg-white/40 backdrop-blur-sm rounded-full p-2 border border-stone-200">
           {cardData.map((card: CardData) => (
             <button
               key={card.id}
@@ -160,7 +160,7 @@ const AnimatedTabs = ({ cardData }: { cardData: CardData[] }) => {
                 "focus:outline-none focus:ring-2 focus:ring-white/50",
                 activeTab === card.id 
                   ? "text-white" 
-                  : "text-gray-400 hover:text-gray-200 hover:scale-105"
+                  : "text-stone-500 hover:text-stone-700 hover:scale-105"
               )}
               onClick={() => handleTabClick(card.id)}
             >
@@ -322,12 +322,11 @@ const AnimatedTabs = ({ cardData }: { cardData: CardData[] }) => {
 
                 {/* Modern Meaning */}
                 <motion.div
-                  className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                  className="bg-white/30 backdrop-blur-sm rounded-xl p-6 border border-stone-200"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.7 }}
                 >
-                  <strong className="text-yellow-300">Ý nghĩa hôm nay:</strong>
                   <p className="text-gray-200 mt-2">
                     {activeCard.id === "a" && "Lợi ích chung là mẫu số chung giúp hoà giải khác biệt và tạo nền tảng hợp tác. Khi đặt lợi ích tối cao của dân tộc và lợi ích căn bản của nhân dân lao động lên trên, mọi chính sách, quyết sách và hành động đều dễ được đồng thuận hơn; từ đó giảm xung đột lợi ích, gia tăng tính bền vững trong liên kết xã hội và thúc đẩy phát triển toàn diện."}
                     {activeCard.id === "b" && "Truyền thống lịch sử là nguồn sức mạnh tinh thần, kết nối thế hệ này với thế hệ khác. Việc khơi dậy và gìn giữ giá trị yêu nước, tinh thần nhân nghĩa và truyền thống đoàn kết không chỉ nuôi dưỡng bản sắc dân tộc mà còn tạo động lực tinh thần để cộng đồng cùng vượt khó, chung tay đối mặt thử thách thời đại."}
@@ -429,10 +428,10 @@ export default function Part3() {
             'url("/imgs/Part3/Điều kiện để xây dựng khối đại đoàn kết toàn dân tộc.jpg")',
         }}
       ></div>
-      <div className="z-0 absolute size-full top-0 bg-gradient-to-b from-[#0d0e12]/95 via-[#12131a]/95 to-[#0d0e12]/95 pointer-events-none" />
+      <div className="z-0 absolute size-full top-0 bg-gradient-to-b from-[#FDF6E3]/95 via-white/95 to-[#FDF6E3]/95 pointer-events-none" />
       {/* <div className="absolute inset-0 animated-bg-enhanced"></div> */}
       {/* Additional patriotic gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-blue-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-red-100/30 via-transparent to-blue-100/20"></div>
       {/* Header */}
       <div className="text-center py-12 relative z-10">
         <h1 className="flex justify-center items-center relative mb-4 min-h-[120px] z-10">
@@ -790,12 +789,12 @@ export default function Part3() {
           position: relative;
           overflow: hidden;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+          box-shadow: 0 4px 15px rgba(185, 28, 28, 0.2);
         }
 
         .modern-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+          box-shadow: 0 8px 25px rgba(185, 28, 28, 0.3);
         }
 
         .modern-btn::before {

@@ -106,50 +106,50 @@ export default function QandA() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#0d0e12] overflow-x-hidden flex flex-col justify-start items-center pt-28 pb-12 z-0">
+    <div className="relative min-h-screen bg-[#FDF6E3] overflow-x-hidden flex flex-col justify-start items-center pt-28 pb-12 z-0">
       {/* Background patterns */}
       <AnimatedGridPattern
         numSquares={40}
         maxOpacity={0.12}
         duration={3}
-        className={cn("inset-x-0 inset-y-[-30%] h-[150%] skew-y-12 -z-20 text-amber-500/10")}
+        className={cn("inset-x-0 inset-y-[-30%] h-[150%] skew-y-12 -z-20 text-red-700/8")}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0d0e12] via-[#0d0e12]/95 to-[#12131a]/95 -z-30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#FDF6E3] via-[#FDF6E3]/95 to-white/95 -z-30" />
       
       {/* Glow effects */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/5 rounded-full filter blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/5 rounded-full filter blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-red-500/5 rounded-full filter blur-[120px] pointer-events-none -z-10" />
 
       {/* Header */}
       <div className="text-center mb-8 max-w-2xl px-4 z-10">
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-wider bg-gradient-to-b from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(245,158,11,0.2)] mb-2 uppercase">
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-wider bg-gradient-to-b from-red-800 via-red-600 to-red-700 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(185,28,28,0.15)] mb-2 uppercase">
           Diễn Đàn Luận Đàm
         </h1>
-        <p className="text-xs md:text-sm text-neutral-400 font-medium tracking-wide uppercase">
+        <p className="text-xs md:text-sm text-stone-500 font-medium tracking-wide uppercase">
           Nơi trao đổi ý kiến, đề xuất câu hỏi và tháo gỡ vướng mắc về bài học Sức mạnh Đại Đoàn Kết
         </p>
-        <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent mx-auto mt-4" />
+        <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-red-600/40 to-transparent mx-auto mt-4" />
       </div>
 
       {loading ? (
         <div className="flex-1 flex flex-col justify-center items-center gap-4 cursor-wait z-10 my-auto">
-          <Loader2 className="size-16 text-amber-500 animate-spin" />
-          <p className="font-semibold text-amber-500/70 tracking-wider text-sm">Đang tải bản lưu trữ...</p>
+          <Loader2 className="size-16 text-red-700 animate-spin" />
+          <p className="font-semibold text-red-700/70 tracking-wider text-sm">Đang tải bản lưu trữ...</p>
         </div>
       ) : (
         <div className="w-full max-w-6xl px-6 md:px-10 flex-1 flex flex-col z-10 justify-start items-center">
           {notes.length === 0 ? (
-            <div className="w-full flex-1 flex flex-col justify-center items-center text-center py-20 border border-amber-900/10 rounded-2xl bg-[#12131a]/40 backdrop-blur-sm">
-              <p className="text-neutral-500 text-lg font-medium">Chưa có câu hỏi nào được lưu trữ.</p>
-              <p className="text-neutral-600 text-sm mt-1">Hãy nhấn nút ở góc dưới để tạo câu hỏi đầu tiên!</p>
+            <div className="w-full flex-1 flex flex-col justify-center items-center text-center py-20 border border-red-800/10 rounded-2xl bg-white/40 backdrop-blur-sm">
+              <p className="text-stone-400 text-lg font-medium">Chưa có câu hỏi nào được lưu trữ.</p>
+              <p className="text-stone-400 text-sm mt-1">Hãy nhấn nút ở góc dưới để tạo câu hỏi đầu tiên!</p>
             </div>
           ) : (
-            <div className="w-full bg-[#161720]/30 border border-amber-900/25 rounded-2xl p-8 md:p-10 shadow-2xl relative overflow-hidden min-h-[58vh] flex flex-col justify-center">
+            <div className="w-full bg-[#FAF0DC]/30 border border-red-800/12 rounded-2xl p-8 md:p-10 shadow-2xl relative overflow-hidden min-h-[58vh] flex flex-col justify-center">
               {/* Decorative gold accent lines */}
-              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
-              <div className="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-red-600/20 to-transparent" />
+              <div className="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-red-600/20 to-transparent" />
 
-              <div className="flex flex-wrap justify-center gap-8 overflow-y-auto max-h-[52vh] pr-2 scrollbar-thin scrollbar-thumb-amber-900/30 scrollbar-track-transparent py-4">
+              <div className="flex flex-wrap justify-center gap-8 overflow-y-auto max-h-[52vh] pr-2 scrollbar-thin scrollbar-thumb-red-800/20 scrollbar-track-transparent py-4">
                 {notes.map((note, index) => (
                   <div key={note.id} className="w-72 shrink-0">
                     <QnANotePaper 

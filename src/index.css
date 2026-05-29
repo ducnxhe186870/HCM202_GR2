@@ -16,12 +16,12 @@
 @theme {
   --darkMode: false;
 
-  /* New branding - Dark Heritage Theme */
-  --brand-500: #b91c1c; /* Crimson-700 */
-  --brand-600: #7f1d1d; /* Crimson-900 */
-  --brand-50: #0d0e12;  /* Dark charcoal background */
-  --brand-gold: #d97706; /* Gold/Amber */
-  --brand-gold-light: #facc15; /* Light Gold */
+  /* Vietnamese Heritage Light Theme */
+  --brand-500: #b91c1c; /* Crimson-700 — đỏ truyền thống */
+  --brand-600: #991b1b; /* Crimson-800 */
+  --brand-50: #FDF6E3;  /* Cream / Ivory background */
+  --brand-gold: #d97706; /* Gold / Amber */
+  --brand-gold-light: #f59e0b; /* Light Gold */
 
   --font-title: "UTM-Gunslinger", system-ui;
   --font-heading: "Inter", system-ui;
@@ -51,6 +51,10 @@
   --animate-aurora: aurora 8s ease-in-out infinite alternate;
 
   --animate-shine: shine var(--duration) infinite linear;
+
+  --animate-float-particle: floatParticle 6s ease-in-out infinite;
+  --animate-shimmer-text: shimmerText 3s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
 }
 
 /* 3D FlashCard CSS */
@@ -328,6 +332,51 @@
   }
 }
 
+/* ========= Easter Egg Keyframes ========= */
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) scale(0.8);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-40px) translateX(5px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
 .view-page {
   view-transition-name: page;
   isolation: isolate;
@@ -376,43 +425,44 @@
   animation: spin-slow 40s linear infinite;
 }
 
-/* Glassmorphism panel with gold border glow */
+/* ========= Light Heritage Panels ========= */
+
+/* Glassmorphism panel with gold border — LIGHT version */
 .gold-glow-panel {
-  background: rgba(18, 20, 29, 0.75);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(217, 119, 6, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
-              inset 0 0 15px rgba(217, 119, 6, 0.05);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  box-shadow: 0 4px 20px 0 rgba(185, 28, 28, 0.06),
+              0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .gold-glow-panel:hover {
-  border-color: rgba(217, 119, 6, 0.6);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6),
-              0 0 15px rgba(217, 119, 6, 0.2),
-              inset 0 0 20px rgba(217, 119, 6, 0.1);
+  border-color: rgba(217, 119, 6, 0.45);
+  box-shadow: 0 8px 30px 0 rgba(185, 28, 28, 0.1),
+              0 0 12px rgba(217, 119, 6, 0.1);
 }
 
-/* Crimson glow panel */
+/* Crimson glow panel — LIGHT version */
 .crimson-glow-panel {
-  background: rgba(18, 20, 29, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(239, 68, 68, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
-              inset 0 0 15px rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(185, 28, 28, 0.15);
+  box-shadow: 0 4px 20px 0 rgba(185, 28, 28, 0.06),
+              0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .crimson-glow-panel:hover {
-  border-color: rgba(239, 68, 68, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6),
-              0 0 15px rgba(239, 68, 68, 0.2);
+  border-color: rgba(185, 28, 28, 0.35);
+  box-shadow: 0 8px 30px 0 rgba(185, 28, 28, 0.1),
+              0 0 12px rgba(185, 28, 28, 0.08);
 }
 
-/* Scroll (parchment) layout styling */
+/* Scroll (parchment) layout styling — LIGHT version */
 .scroll-parchment {
-  background-color: #1a1510;
-  background-image: radial-gradient(circle at 50% 50%, #291e14 0%, #15100c 100%);
-  border: 2px solid #b47a39;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8), inset 0 0 30px rgba(180, 122, 57, 0.3);
+  background-color: #FDF6E3;
+  background-image: radial-gradient(circle at 50% 50%, #FAF0DC 0%, #F5E6C8 100%);
+  border: 2px solid #d97706;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1), inset 0 0 20px rgba(217, 119, 6, 0.08);
   position: relative;
 }
 
@@ -423,25 +473,24 @@
   left: 4px;
   right: 4px;
   bottom: 4px;
-  border: 1px dashed rgba(180, 122, 57, 0.4);
+  border: 1px dashed rgba(217, 119, 6, 0.25);
   pointer-events: none;
 }
 
-/* Scrollbars for dark scrollables */
+/* Scrollbars for light scrollables */
 .dark-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 .dark-scrollbar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.04);
   border-radius: 4px;
 }
 .dark-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(217, 119, 6, 0.4);
+  background: rgba(185, 28, 28, 0.25);
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .dark-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(217, 119, 6, 0.7);
+  background: rgba(185, 28, 28, 0.45);
 }
-

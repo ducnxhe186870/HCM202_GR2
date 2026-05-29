@@ -4,8 +4,8 @@ import Footer from './Footer';
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0d0e12] text-neutral-100">
-      <main id="view-root" className="view-page flex-1 max-w-[100svw] pb-28 overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-[#FDF6E3] text-stone-800">
+      <main id="view-root" className="view-page flex-1 max-w-[100svw] pb-24 overflow-x-hidden">
         <Outlet />
       </main>
 

@@ -63,15 +63,15 @@ export default function CreateDialog() {
         <Tooltip>
           <TooltipTrigger asChild>
             <div className="cursor-pointer z-10 inline-flex items-center justify-center w-14 h-14 rounded-full border 
-          border-amber-500/30 bg-gradient-to-br from-amber-600 to-amber-900 text-amber-100 shadow-lg transition-all 
-          duration-200 ease-out hover:shadow-amber-500/10 group-hover:scale-[1.05] active:scale-95 
-          focus:outline-none focus:ring-2 focus:ring-amber-500/40">
+          border-red-600/30 bg-gradient-to-br from-red-600 to-red-800 text-white shadow-lg transition-all 
+          duration-200 ease-out hover:shadow-red-600/10 group-hover:scale-[1.05] active:scale-95 
+          focus:outline-none focus:ring-2 focus:ring-red-600/40">
               <Plus className="w-7 h-7" />
             </div>
           </TooltipTrigger>
 
           <TooltipContent side="right" sideOffset={12}>
-            <p className="font-bold text-xs bg-[#12131a] text-amber-400 border border-amber-900/30 px-3 py-1.5 rounded-lg shadow-xl uppercase tracking-wider">
+            <p className="font-bold text-xs bg-white text-red-700 border border-red-800/15 px-3 py-1.5 rounded-lg shadow-xl uppercase tracking-wider">
               Tạo câu hỏi
             </p>
           </TooltipContent>

@@ -33,13 +33,13 @@ export default function Part5() {
   const sec5 = useInView()
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-b from-[#0d0e12] to-[#12131a] pb-12 select-none">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#FDF6E3] to-white pb-12 select-none">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay pointer-events-none"
         style={{ backgroundImage: 'url("/imgs/part1-1.jpg")' }}
       ></div>
-      <div className="z-0 absolute size-full top-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/80 pointer-events-none" />
+      <div className="z-0 absolute size-full top-0 bg-gradient-to-b from-white/80 via-transparent to-white/80 pointer-events-none" />
 
       <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="max-w-5xl mx-auto">
@@ -47,15 +47,15 @@ export default function Part5() {
           <div className="text-center mb-10">
             <h1
               ref={sec1.ref}
-              className={`text-3xl md:text-4xl font-bold mb-4 font-heading bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent inline-block transition-all duration-700 ease-out ${sec1.inView
+              className={`text-3xl md:text-4xl font-bold mb-4 font-heading bg-gradient-to-r from-red-600 to-amber-700 bg-clip-text text-transparent inline-block transition-all duration-700 ease-out ${sec1.inView
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-4'
                 }`}
             >
               Phương thức xây dựng khối đại đoàn kết dân tộc
             </h1>
-            <div className="mt-2 inline-block px-6 py-2.5 bg-amber-500/10 backdrop-blur-lg rounded-2xl border border-amber-500/30 shadow-2xl">
-              <p className="text-sm md:text-base text-amber-400 font-medium font-heading">
+            <div className="mt-2 inline-block px-6 py-2.5 bg-red-600/5 backdrop-blur-lg rounded-2xl border border-red-600/30 shadow-2xl">
+              <p className="text-sm md:text-base text-red-600 font-medium font-heading">
                 Thực hành dân vận, tổ chức, quy tụ sức mạnh
               </p>
             </div>
@@ -65,26 +65,26 @@ export default function Part5() {
             {/* Phần 1 */}
             <div
               ref={sec2.ref}
-              className={`gold-glow-panel rounded-2xl p-6 border border-amber-900/30 bg-[#161722]/85 shadow-2xl transition-all duration-700 ease-out transform ${sec2.inView
+              className={`gold-glow-panel rounded-2xl p-6 border border-red-800/15 bg-white/85 shadow-2xl transition-all duration-700 ease-out transform ${sec2.inView
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
                 } hover:shadow-3xl`}
             >
-              <h2 className="text-xl md:text-2xl font-bold text-amber-400 mb-3 font-heading">
+              <h2 className="text-xl md:text-2xl font-bold text-red-600 mb-3 font-heading">
                 Làm tốt công tác vận động quần chúng (dân vận)
               </h2>
-              <p className="text-base text-neutral-300 mb-4 leading-relaxed">
+              <p className="text-base text-stone-600 mb-4 leading-relaxed">
                 Đây là phương thức cơ bản nhất. Hồ Chí Minh khẳng định:
-                <span className="font-bold text-amber-300 italic">
+                <span className="font-bold text-amber-700 italic">
                   {' '}
                   "Dân vận khéo thì việc gì cũng thành công."
                 </span>
               </p>
-              <ul className="list-disc list-inside space-y-2 text-sm text-neutral-300">
+              <ul className="list-disc list-inside space-y-2 text-sm text-stone-600">
                 <li>Phải gần dân, hiểu dân, tin dân và làm cho dân tin Đảng.</li>
                 <li>
                   Hồ Chí Minh dặn:
-                  <span className="italic text-amber-500">
+                  <span className="italic text-red-700">
                     "cần phải chịu khó tìm đủ cách giải thích cho họ hiểu rằng: những việc đó là vì ích lợi của họ mà phải làm"
                   </span>
                 </li>
@@ -101,13 +101,13 @@ export default function Part5() {
                   : 'max-h-0 opacity-0'
                   }`}
               >
-                <div className="bg-black/30 rounded-xl p-4 border border-amber-900/10">
-                  <p className="text-sm text-neutral-400 leading-relaxed">
+                <div className="bg-white/30 rounded-xl p-4 border border-red-800/10">
+                  <p className="text-sm text-stone-500 leading-relaxed">
                     Dân vận không chỉ là tuyên truyền mà còn là tổ chức, lắng
                     nghe và phản hồi kịp thời lợi ích chính đáng của nhân dân.
                     Cán bộ dân vận cần "gần dân, trọng dân, hiểu dân, học dân" để xây dựng niềm tin sắt đá.
                   </p>
-                  <ul className="mt-2 list-disc list-inside text-xs text-neutral-500 space-y-1">
+                  <ul className="mt-2 list-disc list-inside text-xs text-stone-400 space-y-1">
                     <li>Xây dựng cơ chế đối thoại định kỳ giữa chính quyền và người dân.</li>
                     <li>Phát huy vai trò giám sát, phản biện xã hội của Mặt trận Tổ quốc.</li>
                   </ul>
@@ -118,7 +118,7 @@ export default function Part5() {
                   type="button"
                   aria-expanded={open1}
                   onClick={() => setOpen1((v) => !v)}
-                  className="px-4 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold shadow transition cursor-pointer"
+                  className="px-4 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-bold shadow transition cursor-pointer"
                 >
                   {open1 ? 'Thu gọn' : 'Xem chi tiết'}
                 </button>
@@ -128,12 +128,12 @@ export default function Part5() {
             {/* Phần 2 */}
             <div
               ref={sec3.ref}
-              className={`gold-glow-panel rounded-2xl p-6 border border-amber-900/30 bg-[#161722]/85 shadow-2xl transition-all duration-700 ease-out transform ${sec3.inView
+              className={`gold-glow-panel rounded-2xl p-6 border border-red-800/15 bg-white/85 shadow-2xl transition-all duration-700 ease-out transform ${sec3.inView
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
                 } hover:shadow-3xl`}
             >
-              <h2 className="text-xl md:text-2xl font-bold text-amber-400 mb-4 font-heading">
+              <h2 className="text-xl md:text-2xl font-bold text-red-600 mb-4 font-heading">
                 Mỗi tầng lớp đều có tổ chức đại diện
               </h2>
               <div className="grid grid-cols-2 gap-4">
@@ -161,22 +161,22 @@ export default function Part5() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="bg-black/40 p-3.5 rounded-xl border border-amber-950/20 shadow-md transition-all hover:border-amber-500/20"
+                    className="bg-white/40 p-3.5 rounded-xl border border-red-900/10 shadow-md transition-all hover:border-red-600/20"
                   >
                     <div className="flex items-center space-x-2.5 text-sm">
                       <div className={`w-2 h-2 ${item.color} rounded-full`}></div>
-                      <span className="font-semibold text-neutral-200">
+                      <span className="font-semibold text-stone-700">
                         {item.name}
                       </span>
-                      <span className="text-neutral-500">→</span>
-                      <span className="text-amber-400 font-medium">
+                      <span className="text-stone-400">→</span>
+                      <span className="text-red-600 font-medium">
                         {item.org}
                       </span>
                     </div>
                   </div>
                 ))}
               </div>
-              <p className="mt-4 text-sm text-neutral-400 italic">
+              <p className="mt-4 text-sm text-stone-500 italic">
                 <strong>Mục đích:</strong> Tập hợp gắn kết mọi tầng lớp đa dạng vào khối đoàn kết chung thống nhất.
               </p>
               <div
@@ -185,8 +185,8 @@ export default function Part5() {
                   : 'max-h-0 opacity-0'
                   }`}
               >
-                <div className="bg-black/30 rounded-xl p-4 border border-amber-900/10">
-                  <p className="text-sm text-neutral-400 leading-relaxed">
+                <div className="bg-white/30 rounded-xl p-4 border border-red-800/10">
+                  <p className="text-sm text-stone-500 leading-relaxed">
                     Ngoài các tầng lớp cơ bản, cần mở rộng mặt trận đoàn kết tới
                     các trí thức, doanh nhân, kiều bào ở nước ngoài, bảo đảm
                     mọi người Việt yêu nước đều có một tiếng nói.
@@ -198,7 +198,7 @@ export default function Part5() {
                   type="button"
                   aria-expanded={open2}
                   onClick={() => setOpen2((v) => !v)}
-                  className="px-4 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold shadow transition cursor-pointer"
+                  className="px-4 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-bold shadow transition cursor-pointer"
                 >
                   {open2 ? 'Thu gọn' : 'Xem chi tiết'}
                 </button>
@@ -208,24 +208,24 @@ export default function Part5() {
             {/* Phần 3 */}
             <div
               ref={sec4.ref}
-              className={`gold-glow-panel rounded-2xl p-6 border border-amber-900/30 bg-[#161722]/85 shadow-2xl transition-all duration-700 ease-out transform ${sec4.inView
+              className={`gold-glow-panel rounded-2xl p-6 border border-red-800/15 bg-white/85 shadow-2xl transition-all duration-700 ease-out transform ${sec4.inView
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-6'
                 } hover:shadow-3xl`}
             >
-              <h2 className="text-xl md:text-2xl font-bold text-amber-400 mb-3 font-heading">
+              <h2 className="text-xl md:text-2xl font-bold text-red-600 mb-3 font-heading">
                 Quy tụ các đoàn thể vào Mặt trận dân tộc thống nhất
               </h2>
-              <p className="text-base text-neutral-300 mb-4 leading-relaxed">
+              <p className="text-base text-stone-600 mb-4 leading-relaxed">
                 Đây là bước phát triển cao nhất: các đoàn thể cùng quy tụ về một
-                <span className="font-bold text-amber-300">
+                <span className="font-bold text-amber-700">
                   {' '}
                   “ngôi nhà chung”
                 </span>{' '}
                 để hiệp thương thống nhất hành động.
               </p>
-              <div className="bg-[#0d0e12]/60 p-4 rounded-xl border border-amber-900/10 mb-4">
-                <p className="text-sm text-neutral-300">
+              <div className="bg-[#F5E6C8]/60 p-4 rounded-xl border border-red-800/10 mb-4">
+                <p className="text-sm text-stone-600">
                   <strong>Kết quả:</strong> Loại bỏ chia rẽ, kết hợp năng lực hành động đơn lẻ thành sức mạnh tổng hợp vô địch của toàn dân tộc.
                 </p>
               </div>
@@ -235,10 +235,10 @@ export default function Part5() {
                   : 'max-h-0 opacity-0'
                   }`}
               >
-                <div className="bg-black/30 rounded-xl p-4 border border-amber-900/10">
-                  <p className="text-xs md:text-sm text-neutral-400 leading-relaxed">
+                <div className="bg-white/30 rounded-xl p-4 border border-red-800/10">
+                  <p className="text-xs md:text-sm text-stone-500 leading-relaxed">
                     Hồ Chí Minh chỉ rõ:
-                    <span className="italic text-amber-500 block mt-1">
+                    <span className="italic text-red-700 block mt-1">
                       "Mặt trận dân tộc thống nhất vẫn là một trong những lực lượng to lớn của cách mạng Việt Nam... Phải đoàn kết tốt các đảng phái, các đoàn thể, các nhân sĩ trong Mặt trận Tổ quốc Việt Nam, thực hiện hợp tác lâu dài, giúp đỡ lẫn nhau, cùng nhau tiến bộ..."
                     </span>
                   </p>
@@ -249,7 +249,7 @@ export default function Part5() {
                   type="button"
                   aria-expanded={open3}
                   onClick={() => setOpen3((v) => !v)}
-                  className="px-4 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold shadow transition cursor-pointer"
+                  className="px-4 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-bold shadow transition cursor-pointer"
                 >
                   {open3 ? 'Thu gọn' : 'Xem chi tiết'}
                 </button>
@@ -267,19 +267,19 @@ export default function Part5() {
               <h3 className="text-lg md:text-xl font-bold text-red-400 mb-2 font-heading">
                 Ý nghĩa của đại đoàn kết dân tộc
               </h3>
-              <p className="text-neutral-300 text-base leading-relaxed">
+              <p className="text-stone-600 text-base leading-relaxed">
                 Đại đoàn kết dân tộc là sức mạnh nội sinh khổng lồ, là động lực cơ bản quyết định thành bại để bảo vệ và phát triển đất nước bền vững trong thời đại mới.
               </p>
             </div>
 
             {/* Kết luận */}
-            <div className="gold-glow-panel rounded-2xl p-8 border border-amber-900/30 bg-[#12131a]/85 shadow-2xl">
-              <h2 className="text-2xl font-bold text-center mb-6 text-amber-500 font-heading">
+            <div className="gold-glow-panel rounded-2xl p-8 border border-red-800/15 bg-white/85 shadow-2xl">
+              <h2 className="text-2xl font-bold text-center mb-6 text-red-700 font-heading">
                 KẾT LUẬN CHUYÊN ĐỀ
               </h2>
-              <div className="space-y-4 text-sm leading-relaxed text-neutral-300">
+              <div className="space-y-4 text-sm leading-relaxed text-stone-600">
                 <p className="text-center">
-                  <span className="font-semibold text-amber-400">
+                  <span className="font-semibold text-red-600">
                     Đại đoàn kết toàn dân tộc
                   </span>{' '}
                   là chiến lược cách mạng cơ bản, xuyên suốt và lâu dài trong tư tưởng
@@ -287,7 +287,7 @@ export default function Part5() {
                 </p>
                 <p className="text-center">
                   Đây là{' '}
-                  <span className="font-bold text-amber-400">
+                  <span className="font-bold text-red-600">
                     cội nguồn sức mạnh vô địch
                   </span>
                   , quyết định mọi thắng lợi của cách mạng Việt Nam.
@@ -296,8 +296,8 @@ export default function Part5() {
                   Hồ Chí Minh khẳng định: đoàn kết vừa là mục tiêu, vừa là động lực, là then chốt của thành công.
                 </p>
 
-                <div className="bg-[#0d0e12]/60 rounded-xl p-4 border border-amber-900/20 mt-4 text-center">
-                  <p className="text-xs text-amber-400/90 font-medium">
+                <div className="bg-[#F5E6C8]/60 rounded-xl p-4 border border-red-800/10 mt-4 text-center">
+                  <p className="text-xs text-red-600/90 font-medium">
                     Đoàn kết, đoàn kết, đại đoàn kết – Thành công, thành công, đại thành công.
                   </p>
                 </div>
