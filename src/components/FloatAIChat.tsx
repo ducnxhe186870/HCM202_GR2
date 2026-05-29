@@ -123,10 +123,10 @@ export default function FloatAIChat() {
     <Popover open={isOpen}>
       <PopoverTrigger asChild>
         <button 
-          title="DoanKetBot - Trợ lý số"
+          title="Gr2Bot - Trợ lý số"
           onClick={() => { setAnimate(false); setIsOpen(!isOpen) }}
           className={clsx(
-            "fixed bottom-6 right-6 cursor-pointer border border-amber-500/40 rounded-full bg-[#12131a]/95 p-1.5 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(245,158,11,0.25)] transition-all z-[9999] focus:outline-none flex items-center justify-center shadow-lg",
+            "fixed bottom-6 right-6 cursor-pointer border border-red-600/30 rounded-full bg-white/95 p-1.5 hover:border-red-500 hover:shadow-[0_0_15px_rgba(185,28,28,0.15)] transition-all z-[9999] focus:outline-none flex items-center justify-center shadow-lg",
             animate && "animate-bounce"
           )}
         >
@@ -136,36 +136,36 @@ export default function FloatAIChat() {
 
       <PopoverContent side="left" align="end"
         className={clsx(
-          "w-96 h-[500px] grid grid-rows-[auto_1fr_auto] p-0 border border-amber-900/40 bg-[#12131a]/95 rounded-xl shadow-2xl overflow-hidden",
+          "w-96 h-[500px] grid grid-rows-[auto_1fr_auto] p-0 border border-red-800/20 bg-white/95 rounded-xl shadow-2xl overflow-hidden",
           "transition-all duration-300 ease-out",
           "data-[state=open]:animate-popover-in",
           "data-[state=closed]:animate-popover-out"
         )}>
 
         {/* Header */}
-        <div className="flex justify-between items-center bg-gradient-to-r from-amber-900/60 to-amber-950/80 px-4 py-3 border-b border-amber-900/30">
+        <div className="flex justify-between items-center bg-gradient-to-r from-red-700 to-red-800 px-4 py-3 border-b border-red-800/30">
           <div className="flex gap-2.5 items-center">
-            <h3 className="text-sm font-extrabold uppercase tracking-wider text-amber-200">Trợ Lý Gr2Bot</h3>
+            <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">Trợ Lý Gr2Bot</h3>
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
           </div>
 
-          <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/10 rounded transition-colors">
-            <SquareMinus className="text-neutral-400 hover:text-amber-200 size-4 cursor-pointer" />
+          <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded transition-colors">
+            <SquareMinus className="text-stone-400 hover:text-white size-4 cursor-pointer" />
           </button>
         </div>
 
         {/* Chat Message Window */}
-        <div className="flex-1 min-h-0 bg-[#0d0e12]/60 pt-3">
+        <div className="flex-1 min-h-0 bg-[#FDF6E3]/60 pt-3">
           <ScrollArea viewportRef={viewportRef} className="h-full w-full px-3 pb-3">
             <div className="h-full w-full grid auto-rows-auto gap-3.5">
 
               {/* Welcome Message */}
               <div className="flex justify-start items-start gap-2.5 pe-10">
-                <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-amber-900/30" />
-                <div className="text-xs rounded-xl rounded-tl-none p-3 bg-[#161720] border border-neutral-800/80 text-neutral-300 leading-relaxed shadow-sm">
+                <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-red-800/15" />
+                <div className="text-xs rounded-xl rounded-tl-none p-3 bg-stone-100 border border-stone-200 text-stone-700 leading-relaxed shadow-sm">
                   Xin chào! Tôi là Gr2Bot – trợ lý ảo giúp bạn tìm hiểu về chuyên đề Tư tưởng Hồ Chí Minh.<br />
                   Bạn muốn nghiên cứu nội dung nào? (Ví dụ: “Vai trò của đại đoàn kết”, “Mặt trận dân tộc thống nhất”)
                 </div>
@@ -176,24 +176,24 @@ export default function FloatAIChat() {
                   if (msg.isBot) {
                     return (
                       <div key={index} className="flex justify-start items-start gap-2.5 pe-10">
-                        <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-amber-900/30" />
+                        <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-red-800/15" />
 
                         <div className="flex flex-col gap-1 w-full">
-                          <button onClick={() => speakText(index, msg.msg)} className="group flex justify-start items-center gap-1.5 ps-1 cursor-pointer w-fit text-neutral-500" title="Đọc nội dung">
+                          <button onClick={() => speakText(index, msg.msg)} className="group flex justify-start items-center gap-1.5 ps-1 cursor-pointer w-fit text-stone-400" title="Đọc nội dung">
                             {speakingIndex === index && !isPaused ? (
                               <>
-                                <Pause className="size-3.5 text-amber-500 animate-pulse" />
-                                <span className="text-[10px] text-amber-500 font-bold uppercase tracking-wider">Đang đọc...</span>
+                                <Pause className="size-3.5 text-red-600 animate-pulse" />
+                                <span className="text-[10px] text-red-600 font-bold uppercase tracking-wider">Đang đọc...</span>
                               </>
                             ) : (
                               <>
-                                <Speech className="size-3.5 group-hover:text-amber-400 transition-colors" />
-                                <span className="text-[10px] opacity-0 group-hover:opacity-100 group-hover:text-neutral-400 transition-opacity uppercase tracking-wider font-semibold">Đọc bài</span>
+                                <Speech className="size-3.5 group-hover:text-red-500 transition-colors" />
+                                <span className="text-[10px] opacity-0 group-hover:opacity-100 group-hover:text-stone-500 transition-opacity uppercase tracking-wider font-semibold">Đọc bài</span>
                               </>
                             )}
                           </button>
 
-                          <div className="text-xs rounded-xl rounded-tl-none p-3 bg-[#161720] border border-neutral-800/80 text-neutral-300 leading-relaxed shadow-sm prose prose-invert max-w-full break-words prose-p:my-0">
+                          <div className="text-xs rounded-xl rounded-tl-none p-3 bg-stone-100 border border-stone-200 text-stone-700 leading-relaxed shadow-sm prose max-w-full break-words prose-p:my-0">
                             <ReactMarkdown>
                               {msg.msg}
                             </ReactMarkdown>
@@ -204,10 +204,10 @@ export default function FloatAIChat() {
                   } else {
                     return (
                       <div key={index} className="flex justify-end items-start gap-2.5 ps-10">
-                        <p className="text-xs rounded-xl rounded-tr-none p-3 bg-amber-600/10 border border-amber-500/20 text-amber-100 leading-relaxed shadow-sm break-words max-w-full">
+                        <p className="text-xs rounded-xl rounded-tr-none p-3 bg-red-50 border border-red-600/15 text-stone-800 leading-relaxed shadow-sm break-words max-w-full">
                           {msg.msg}
                         </p>
-                        <img src="/imgs/avatar/user.png" alt="User Avatar" className="size-9 rounded-full object-cover border border-amber-950/40" />
+                        <img src="/imgs/avatar/user.png" alt="User Avatar" className="size-9 rounded-full object-cover border border-red-900/20" />
                       </div>
                     );
                   }
@@ -216,13 +216,13 @@ export default function FloatAIChat() {
 
               {aiChat.isPending && (
                 <div className="flex justify-start items-start gap-2.5 pe-10">
-                  <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-amber-900/30" />
-                  <div className="text-xs rounded-xl rounded-tl-none p-3 bg-[#161720] border border-neutral-800/80 text-neutral-400 leading-relaxed shadow-sm flex items-center gap-3">
+                  <img src="/imgs/avatar/vietnamball.png" alt="Bot Image" className="size-9 rounded-full object-cover border border-red-800/15" />
+                  <div className="text-xs rounded-xl rounded-tl-none p-3 bg-stone-100 border border-stone-200 text-stone-500 leading-relaxed shadow-sm flex items-center gap-3">
                     Đang chiêm nghiệm
                     <span className="flex justify-center items-center gap-1 h-3">
-                      <span className="size-1 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                      <span className="size-1 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                      <span className="size-1 bg-amber-500 rounded-full animate-bounce"></span>
+                      <span className="size-1 bg-red-500 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                      <span className="size-1 bg-red-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                      <span className="size-1 bg-red-500 rounded-full animate-bounce"></span>
                     </span>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export default function FloatAIChat() {
         </div>
 
         {/* Input Bar */}
-        <div className="flex bg-[#161720] border-t border-amber-900/35 px-3 py-2.5 items-center gap-2">
+        <div className="flex bg-white border-t border-red-800/15 px-3 py-2.5 items-center gap-2">
           <Textarea
             value={userMsg}
             onChange={(e) => setUserMsg(e.target.value)}
@@ -254,11 +254,11 @@ export default function FloatAIChat() {
               }
             }}
             placeholder="Hỏi trợ lý số về bài học..."
-            className="text-xs flex-1 h-10 min-h-[40px] max-h-[80px] p-2 bg-[#12131a] border border-neutral-800 text-neutral-200 focus-visible:ring-1 focus-visible:ring-amber-500/50 rounded-lg resize-none custom-scrollbar" />
+            className="text-xs flex-1 h-10 min-h-[40px] max-h-[80px] p-2 bg-white border border-stone-300 text-stone-800 focus-visible:ring-1 focus-visible:ring-red-600/50 rounded-lg resize-none custom-scrollbar" />
 
           <button 
             disabled={!userMsg || aiChat.isPending}
-            className="p-2.5 cursor-pointer bg-gradient-to-r from-amber-600 to-amber-500 text-neutral-900 rounded-lg hover:from-amber-500 hover:to-amber-400 disabled:from-neutral-800 disabled:to-neutral-800 disabled:text-neutral-500 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center shrink-0 shadow"
+            className="p-2.5 cursor-pointer bg-gradient-to-r from-red-600 to-red-700 text-white rounded-lg hover:from-red-500 hover:to-red-600 disabled:from-stone-300 disabled:to-stone-300 disabled:text-stone-400 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center shrink-0 shadow"
             onClick={() => {
               if (!userMsg.trim()) return;
               const msg = userMsg;
