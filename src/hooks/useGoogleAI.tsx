@@ -31,9 +31,7 @@ Nhiệm vụ của bạn:
    - Có thể trích dẫn lời Hồ Chí Minh nếu phù hợp (ví dụ: “Đoàn kết, đoàn kết, đại đoàn kết – Thành công, thành công, đại thành công.”).
 `;
 
-// hard-coded :(((
-// fpt wifi tệ vcl, không chạy nổi cloudfare functions để mà giấu api key, chán
-const googleGemini = new GoogleGenAI({apiKey: "AIzaSyCABLZZ3MtFdDjZX4eNURBB7GNlxSV9WCo"});
+const googleGemini = new GoogleGenAI({apiKey: import.meta.env.VITE_GEMINI_API_KEY});
 
 export function useAiChatMutation() {
   return useMutation<GenerateContentResponse, Error, chatData>({
