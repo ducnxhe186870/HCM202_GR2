@@ -111,7 +111,7 @@ export default function Part3Detail() {
 
       {/* Enhanced Header with Parallax Effect */}
       <header
-        className="relative z-10 h-[60vh] md:h-[70vh] bg-cover bg-center bg-fixed flex items-center justify-center overflow-hidden"
+        className="relative z-10 min-h-[75vh] md:min-h-[82vh] py-20 md:py-24 bg-cover bg-center bg-fixed flex items-center justify-center overflow-hidden"
         style={{ backgroundImage: 'url("/imgs/Part3/Bác Hồ.jpg")' }}
       >
         {/* Enhanced Overlay with Patriotic Gradient */}
@@ -124,13 +124,13 @@ export default function Part3Detail() {
         <div className="absolute bottom-40 left-20 w-4 h-4 bg-yellow-300 rounded-full opacity-50 animate-pulse" style={{animationDelay: "1s"}}></div>
         
         {/* Main Content */}
-        <div className="relative z-20 text-center px-6 max-w-6xl mx-auto">
+        <div className="relative z-20 text-center px-6 max-w-6xl mx-auto pb-16">
           {/* Animated Badge */}
           <div className="inline-flex items-center px-6 py-2 rounded-full bg-gradient-to-r from-red-600/20 to-yellow-600/20 backdrop-blur-sm border border-white/20 mb-8 animate-fade-in">
             <div className="w-2 h-2 bg-red-500 rounded-full mr-3 animate-pulse"></div>
             <span className="text-white/90 text-sm font-medium tracking-wider uppercase">Tư tưởng Hồ Chí Minh</span>
           </div>
-
+ 
           {/* Main Title with Enhanced Effects */}
           <h1 className="flex justify-center items-center relative mb-8">
             <TextAnimate
@@ -143,21 +143,20 @@ export default function Part3Detail() {
               {pageData.pageTitle}
             </TextAnimate>
           </h1>
-
+ 
           {/* Subtitle with Stagger Animation */}
           <div className="mb-8 animate-fade-in-up" style={{animationDelay: "1s"}}>
             <p className="text-xl md:text-3xl text-white/95 mb-6 font-light leading-relaxed">
               {pageData.hero.subtitle}
             </p>
           </div>
-
           {/* Enhanced Divider */}
           <div className="flex items-center justify-center mb-8 animate-fade-in-up" style={{animationDelay: "1.5s"}}>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500 to-transparent w-16"></div>
             <div className="mx-4 w-12 h-1 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600 rounded-full shadow-lg"></div>
             <div className="h-px bg-gradient-to-r from-transparent via-yellow-500 to-transparent w-16"></div>
           </div>
-
+ 
           {/* Quote with Enhanced Styling */}
           <blockquote className="relative animate-fade-in-up" style={{animationDelay: "2s"}}>
             <div className="absolute -top-4 -left-4 text-6xl text-red-400/30 font-serif">"</div>
@@ -166,15 +165,15 @@ export default function Part3Detail() {
             </p>
             <div className="absolute -bottom-4 -right-4 text-6xl text-yellow-400/30 font-serif">"</div>
           </blockquote>
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="flex flex-col items-center text-white/70">
-              <span className="text-sm mb-2 font-medium">Cuộn xuống</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </div>
+        </div>
+ 
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
+          <div className="flex flex-col items-center text-white/70">
+            <span className="text-sm mb-2 font-medium">Cuộn xuống</span>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
       </header>

@@ -52,7 +52,9 @@ const carouselData: CarouselItem[] = [
       },
     ],
     references: [
-      "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc",
+      "Giáo trình Tư tưởng Hồ Chí Minh - Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2021",
+      "Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII, Tập I, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2021",
+      "Hồ Chí Minh: Toàn tập, Tập 5, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2011",
     ],
     footerNote: "Tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc",
   },
@@ -98,7 +100,11 @@ const carouselData: CarouselItem[] = [
         external: false,
       },
     ],
-    references: [],
+    references: [
+      "Giáo trình Tư tưởng Hồ Chí Minh - Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2021",
+      "Lịch sử Đảng Cộng sản Việt Nam, Tập I, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2018",
+      "Hồ Chí Minh: Toàn tập, Tập 1, 2, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2011",
+    ],
     footerNote: "Truyền thống dân tộc Việt Nam",
   },
   {
@@ -143,7 +149,10 @@ const carouselData: CarouselItem[] = [
         external: false,
       },
     ],
-    references: [],
+    references: [
+      "Hồ Chí Minh: Toàn tập, Tập 4, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2011 (Thư gửi đồng bào Nam Bộ, 1946)",
+      "Giáo trình Tư tưởng Hồ Chí Minh - Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2021",
+    ],
     footerNote: "Tư tưởng Hồ Chí Minh về khoan dung, độ lượng",
   },
   {
@@ -188,7 +197,11 @@ const carouselData: CarouselItem[] = [
         external: false,
       },
     ],
-    references: [],
+    references: [
+      "Hồ Chí Minh: Toàn tập, Tập 12, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2011 (Tác phẩm Dân vận, 1949)",
+      "Giáo trình Tư tưởng Hồ Chí Minh - Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2021",
+      "Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII, Tập I, Nhà xuất bản Chính trị quốc gia Sự thật, Hà Nội, 2021",
+    ],
     footerNote: "Tư tưởng Hồ Chí Minh về nhân dân",
   },
 ];
