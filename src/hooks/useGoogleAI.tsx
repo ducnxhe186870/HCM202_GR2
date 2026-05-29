@@ -36,7 +36,7 @@ const googleGemini = new GoogleGenAI({apiKey: import.meta.env.VITE_GEMINI_API_KE
 export function useAiChatMutation() {
   return useMutation<GenerateContentResponse, Error, chatData>({
     mutationFn: async (chatData) => {
-      if (!chatData.userChat) throw new Error("Không chat thì gửi làm gì? >:(");
+      if (!chatData.userChat) throw new Error("Không chat với tôi thì gửi làm gì? >:(");
 
       chatData.setChatHistory(prev => [...prev,
       { isBot: false, msg: chatData.userChat, sentAt: new Date() }
@@ -75,7 +75,7 @@ export function useAiChatMutation() {
       console.log("Error:" + error.message)
       chatData.setChatHistory(prev => [...prev, {
         isBot: true,
-        msg: "Lỗi mạng! (mạng fpt chán lắm)",
+        msg: "Lỗi mạng!",
         sentAt: new Date()
       }])
     }
