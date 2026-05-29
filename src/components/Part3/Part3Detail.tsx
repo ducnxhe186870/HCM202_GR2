@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useState, useEffect } from "react";
 import TopBar from "../TopBar";
-import data from "../../data/dai-doan-ket.json";
+import data from "../../data/gr2.json";
 import { TextAnimate } from "../magicui/Text Animations/TextAnimate";
 import { CenterModeCarousel } from "./CenterModeCarousel";
 import { DetailModal } from "./DetailModal";
